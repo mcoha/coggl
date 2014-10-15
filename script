@@ -1,0 +1,21 @@
+$(document).ready(function(){
+    
+    $('#button').on( "mouseenter", function() {
+    $( this ).css({
+      "background-color": "yellow",
+      "font-weight": "bolder"
+
+      
+        
+
+    });
+    $('#button').click(function(){
+       var toAdd=$('input[name=checkListItem]').val();
+        $(".list").append('<p class="item">' + toAdd + '</p>');
+        
+        });
+    
+    
+    $(document).on('click','.item',function(){$(this).remove()});
+    });
+    
